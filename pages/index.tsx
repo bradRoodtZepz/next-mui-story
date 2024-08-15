@@ -2,10 +2,12 @@ import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
-import StyledSection from "./components/styled-section.component";
-import LegacyStyledSection from "./components/legacy-styled-section.component";
-import StyledH1 from "./components/styled-h1.component";
-import { Box, css, ThemeProvider } from "@mui/material";
+import StyledSection from "@/components/styled-section.component";
+import LegacyStyledSection from "@/components/legacy-styled-section.component";
+import StyledH1 from "@/components/styled-h1.component";
+import { Box, css, SxProps, ThemeProvider } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,7 +17,9 @@ const sx = css({
   color: 'primary',
 });
 
+
 export default function Home() {
+  const theme = useTheme();
   return (
     <>
       <Head>
@@ -29,7 +33,11 @@ export default function Home() {
         <StyledSection><p>Some content</p></StyledSection>
         <LegacyStyledSection><h1>Hello</h1></LegacyStyledSection>
         <StyledH1>I are H1</StyledH1>
-        <Box sx={sx}>I are box</Box>
+        <Box sx={{
+          padding: theme.spacing(4),
+          color: theme.palette.primary.main,
+          backgroundColor: theme.palette.secondary.main}}
+          >I are box</Box>
       </main>
     </>
   );

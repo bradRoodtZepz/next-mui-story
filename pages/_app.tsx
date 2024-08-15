@@ -21,6 +21,7 @@ const theme = createTheme({
     primary: orange,
     secondary: purple,
   },
+  spacing: 8,
 });
 
 export default function App(props: AppProps & {emotionCache: EmotionCache}) {

@@ -1,4 +1,4 @@
-import {styled} from "@mui/system";
+import { styled } from "@mui/material";
 
 const StyledH1 = styled('button')(({ theme }) => ({
     backgroundColor: theme.palette.primary.main,
