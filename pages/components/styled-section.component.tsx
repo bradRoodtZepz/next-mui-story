@@ -1,7 +1,8 @@
 import { styled } from "@mui/system";
 
-export default styled('section')({
+export default styled('section')({    
     color: 'green',
     backgroundColor: 'aliceblue',
     padding: '10px',
+    borderRadius: '10px'
 });
