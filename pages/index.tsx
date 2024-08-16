@@ -7,6 +7,8 @@ import LegacyStyledSection from "@/components/legacy-styled-section.component";
 import StyledH1 from "@/components/styled-h1.component";
 import { Box, css, SxProps, ThemeProvider } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
+import MainH1 from "@/components/main-h1.component";
+import SomeLegacyStyledSection from "@/components/some-legacy-styled-section.component";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -31,13 +33,14 @@ export default function Home() {
       
       <main className={`${styles.main} ${inter.className}`}>
         <StyledSection><p>Some content</p></StyledSection>
-        <LegacyStyledSection><h1>Hello</h1></LegacyStyledSection>
+        <SomeLegacyStyledSection><h1>Hello there</h1></SomeLegacyStyledSection>
         <StyledH1>I are H1</StyledH1>
         <Box sx={{
           padding: theme.spacing(4),
           color: theme.palette.primary.main,
-          backgroundColor: theme.palette.secondary.main}}
+          backgroundColor: theme.palette.background.default}}
           >I are box</Box>
+          <MainH1 title="Say hello"></MainH1>
       </main>
     </>
   );

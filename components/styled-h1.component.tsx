@@ -1,10 +1,10 @@
 import { styled } from "@mui/material";
 
-const StyledH1 = styled('button')(({ theme }) => ({
+const MainH1 = styled('button')(({ theme }) => ({
     backgroundColor: theme.palette.primary.main,
-    color: theme.palette.primary.contrastText,
+    color: theme.palette.secondary.main,
     padding: theme.spacing(4),    
   }));
 
 
-  export default StyledH1;
+  export default MainH1;
