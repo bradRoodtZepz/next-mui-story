@@ -1,6 +1,6 @@
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { Roboto } from 'next/font/google';
-import { lime, orange, pink, purple } from '@mui/material/colors';
+import { green, purple, brown } from '@mui/material/colors';
 
 const roboto = Roboto({
   weight: ['300', '400', '500', '700'],
@@ -14,7 +14,7 @@ export const lightTheme = createTheme({
     },
     palette: {      
       mode: 'light',
-      primary: pink,
+      primary: green,
       secondary: purple,
       background: {
         default: '#f5f5f5',
@@ -30,7 +30,7 @@ export const lightTheme = createTheme({
     },
     palette: {
       mode: 'light',      
-      primary: orange,
+      primary: brown,
       secondary: purple,
       background: {
         default: '#121212',

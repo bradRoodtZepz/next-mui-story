@@ -33,7 +33,7 @@ export default function Home() {
       
       <main className={`${styles.main} ${inter.className}`}>
         <StyledSection><p>Some content</p></StyledSection>
-        <SomeLegacyStyledSection><h1>Hello there</h1></SomeLegacyStyledSection>
+        <SomeLegacyStyledSection><h1>Hello there</h1><button onClick={() => alert('clicked')}>Click</button></SomeLegacyStyledSection>
         <StyledH1>I are H1</StyledH1>
         <Box sx={{
           padding: theme.spacing(4),
