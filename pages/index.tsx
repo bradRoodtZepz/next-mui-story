@@ -9,6 +9,7 @@ import { Box, css, SxProps, ThemeProvider } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import MainH1 from "@/components/main-h1.component";
 import SomeLegacyStyledSection from "@/components/some-legacy-styled-section.component";
+import { buttonStyle} from '@/components/styles'; // Import the styles
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -32,7 +33,7 @@ export default function Home() {
       </Head>
       
       <main className={`${styles.main} ${inter.className}`}>
-        <StyledSection><p>Some content</p></StyledSection>
+        <StyledSection sx={{padding:'50px'}}><p>Some content</p></StyledSection>
         <SomeLegacyStyledSection><h1>Hello there</h1><button onClick={() => alert('clicked')}>Click</button></SomeLegacyStyledSection>
         <StyledH1>I are H1</StyledH1>
         <Box sx={{
@@ -40,7 +41,9 @@ export default function Home() {
           color: theme.palette.primary.main,
           backgroundColor: theme.palette.background.default}}
           >I are box</Box>
-          <MainH1 title="Say hello"></MainH1>
+
+        <Box component='button' sx={buttonStyle}>I are booton</Box>
+        <MainH1 title="Say hello"></MainH1>
       </main>
     </>
   );
